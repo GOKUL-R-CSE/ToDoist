@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+
+import { AuthContextProvider } from './Context/AuthContext'
+import { TasksContextProvider } from './Context/TaskContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthContextProvider>
+      <TasksContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </TasksContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>
 );
 
