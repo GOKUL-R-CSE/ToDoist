@@ -49,6 +49,7 @@ const TaskDetails = ({ task }) => {
     if (response.ok) {
       dispatch({type: 'COMPLETE_TASKS', payload: json})
     }
+    window.location.reload(false);
   }
   
 
