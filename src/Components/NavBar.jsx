@@ -21,7 +21,7 @@ const NavBar = () => {
                     <div className ='h-12 align-middle mr-20 mt-1 mb-1'>
                         <ul className ='flex justify-around h-12' >
                             <li className ='p-3 hover:bg-red-600 hover:text-white hover:border-double hover:rounded-3xl'><i className="fa-solid fa-house-chimney mr-2"></i><Link to='/home'>Home</Link></li>
-                            <li className ='p-3 hover:bg-red-600 hover:text-white hover:border-double hover:rounded-3xl'><i className="fa-sharp fa-solid fa-blog mr-2"></i><Link to='/blog'>Blog</Link></li>
+                            <li className ='p-3 hover:bg-red-600 hover:text-white hover:border-double hover:rounded-3xl'><i className="fa-solid fa-file mr-2"></i><Link to='/documentation'>Documentation</Link></li>
                             <li className ='p-3 hover:bg-red-600 hover:text-white hover:border-double hover:rounded-3xl'><i className="fa-sharp fa-solid fa-address-card mr-2"></i><Link to='/about'>About</Link></li>
                             
                             <li onClick={handleClick} className='bg-red-600 text-white hover:bg-gray-500 hover:rounded-3xl hover:border-double p-3 ml-6 rounded-2xl'>Log out<i className="fa-solid fa-arrow-right-from-bracket ml-2"></i></li>

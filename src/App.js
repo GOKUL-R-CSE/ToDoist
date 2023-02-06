@@ -12,6 +12,7 @@ import Upcoming from './pages/Upcoming';
 import Today from './pages/Today';
 import Completed from './pages/Completed';
 import About from './pages/About';
+import Documentation from './pages/Documentation';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/today' exact element={<Today />}></Route>
         <Route path='/completed' exact element={<Completed />}></Route>
         <Route path='/about' exact element={<About />}> </Route>
+        <Route path='/documentation' exact element={<Documentation />}> </Route>
       </Routes>
     </>
   );
