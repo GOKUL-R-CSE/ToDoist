@@ -39,7 +39,7 @@ const TaskDetails = ({ task }) => {
       </div>
       <p className='m-0 mt-2 text-sm text-gray-500'><strong>Completion date : </strong>{task.date}</p>
       <p className='m-0 mt-2 text-sm text-gray-500'><strong>Created At : </strong> {format(new Date(task.createdAt), 'MMMM do, yyyy H:mma')}</p>
-      <span className="absolute top-5 right-5 cursor-pointer p-3 rounded-full bg-red-600 text-white" onClick={handleClick}>delete</span>
+      <span className="absolute top-5 right-5 cursor-pointer p-3 rounded-full bg-red-300 text-red-800 font-semibold" onClick={handleClick}>delete<i className="fa-solid fa-xmark ml-2 text-red-800"></i></span>
 
     </div>
   )
