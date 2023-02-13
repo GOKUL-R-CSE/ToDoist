@@ -27,7 +27,7 @@ const handleClick = async(e) => {
   }
 
   const task = {title, desc, date}
-  const response = await fetch('http://localhost:8080/api/task',{
+  const response = await fetch('https://todoist-backend-production.up.railway.app/api/task',{
     method: 'POST',
     body: JSON.stringify(task),
     headers: {

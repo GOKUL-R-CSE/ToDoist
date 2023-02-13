@@ -14,7 +14,7 @@ const Inbox = () => {
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await fetch('http://localhost:8080/api/task', {
+      const response = await fetch('https://todoist-backend-production.up.railway.app/api/task', {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${user.token}`

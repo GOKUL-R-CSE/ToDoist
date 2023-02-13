@@ -16,7 +16,7 @@ const TaskDetails = ({ task }) => {
         return
     }
 
-    const response = await fetch('http://localhost:8080/api/task/' + task._id, {
+    const response = await fetch('https://todoist-backend-production.up.railway.app/api/task/' + task._id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
