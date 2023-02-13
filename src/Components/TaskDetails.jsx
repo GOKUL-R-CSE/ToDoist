@@ -6,6 +6,7 @@ import { useTasksContext } from '../hooks/useTaskContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 // import { useEffect, useState } from 'react'
 // import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const TaskDetails = ({ task }) => {
@@ -52,18 +53,18 @@ const TaskDetails = ({ task }) => {
       dispatch({type: 'COMPLETE_TASKS', payload: json})
     }
     // window.location.reload(false)
-    const res = await fetch('https://todoist-backend-production.up.railway.app/api/task',{
-      headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.token}`
-        }
-    })
-    const js = await res.json()
-      console.log(js)
+    // const res = await fetch('https://todoist-backend-production.up.railway.app/api/task',{
+    //   headers: {
+    //         'Content-Type': 'application/json',
+    //         'Authorization': `Bearer ${user.token}`
+    //     }
+    // })
+    // const js = await res.json()
+    //   console.log(js)
 
-      if (res.ok) {
-        dispatch({type: 'SET_TASKS', payload: json})
-      }
+    //   if (res.ok) {
+    //     dispatch({type: 'SET_TASKS', payload: json})
+    //   }
     
   }
   
@@ -77,7 +78,10 @@ const TaskDetails = ({ task }) => {
       <p className='m-0 mt-2 text-sm text-gray-500'><strong>Completion date : </strong>{task.date}</p>
       <p className='m-0 mt-2 text-sm text-gray-500'><strong>Created At : </strong> {format(new Date(task.createdAt), 'MMMM do, yyyy H:mma')}</p>
       <span className="absolute top-5 right-5 cursor-pointer p-3 rounded-full bg-red-300 text-red-800 font-semibold" onClick={handleClick}>delete<i className="fa-solid fa-xmark ml-2 text-red-800"></i></span>
+      <Link to='/completed'>
       <span className="absolute mt-4 top-16 right-4 cursor-pointer p-3 rounded-full bg-green-300 text-green-800 font-semibold" onClick={handleComplete}>complete<i className="fa-solid fa-check ml-2 text-green-800"></i></span>
+
+      </Link>
     </div>
   )
 }
