@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {format} from 'date-fns'
 
 // import Completed from '../pages/Completed'
@@ -10,26 +11,6 @@ import { useEffect } from 'react';
 const TaskDetails = ({ task }) => {
     const {user} = useAuthContext()
   const { dispatch } = useTasksContext()
-    useEffect(() => {
-    const fetchTasks = async () => {
-      const response = await fetch('https://todoist-backend-production.up.railway.app/api/task', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${user.token}`
-        }
-      })
-      const json = await response.json()
-      console.log(json)
-
-      if (response.ok) {
-        dispatch({type: 'SET_TASKS', payload: json})
-      }
-    }
-    if(user){
-        
-    fetchTasks()
-    }
-  }, [dispatch, user])
 
   const handleClick = async () => {
 
@@ -71,6 +52,26 @@ const TaskDetails = ({ task }) => {
       dispatch({type: 'COMPLETE_TASKS', payload: json})
     }
     // window.location.reload(false)
+    useEffect(() => {
+    const fetchTasks = async () => {
+      const response = await fetch('https://todoist-backend-production.up.railway.app/api/task', {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${user.token}`
+        }
+      })
+      const json = await response.json()
+      console.log(json)
+
+      if (response.ok) {
+        dispatch({type: 'SET_TASKS', payload: json})
+      }
+    }
+    if(user){
+        
+    fetchTasks()
+    }
+  }, [])
     
   }
   
