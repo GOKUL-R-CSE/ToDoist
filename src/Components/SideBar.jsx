@@ -12,7 +12,7 @@ const SideBar = () => {
     { name: "Inbox", link: "/inbox", icon: HiOutlineInbox },
     { name: "Today", link: "/today", icon: BsCalendar2Date },
     { name: "Upcoming", link: "/tomorrow", icon: CgCalendarDates },
-    { name: "Completd", link: "/completed", icon: MdDownloadDone, margin: true },
+    { name: "Completed", link: "/completed", icon: MdDownloadDone, margin: true },
     { name: "Expired", link: "/expired", icon: BsExclamation },
     { name: "Add task", link: "/home", icon: RiAddCircleFill },
 
