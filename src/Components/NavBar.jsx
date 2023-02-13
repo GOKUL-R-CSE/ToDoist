@@ -15,8 +15,8 @@ const NavBar = () => {
                <nav className ='align-middle top-0 w-100 shadow-lg shadow-gray-400'>
                 <div className ='flex justify-between'>
                     <div className ='h-12 align-middle'>
-                        <Link to='/home'><img src='https://www.bacancytechnology.com/blog/wp-content/uploads/2015/12/blog-todo-img.jpg' alt='logo' 
-                        className ='bg-cover bg-center w-40 flex container flex-1 text-center m-1'/></Link>
+                        <Link to='/home'><img src='https://st2.depositphotos.com/5943796/11433/v/950/depositphotos_114331696-stock-illustration-initial-letter-rk-red-swoosh.jpg' alt='logo' 
+                        className ='bg-cover bg-center w-35 flex container h-12 flex-1 text-center ml-8 m-1'/></Link>
                     </div>
                     <div className ='h-12 align-middle mr-20 mt-1 mb-1'>
                         <ul className ='flex justify-around h-12' >

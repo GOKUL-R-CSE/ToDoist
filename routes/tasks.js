@@ -7,7 +7,8 @@ const {
     deleteTask,
     updateTask,
     getTomorrowTask,
-    getCompletedTasks
+    getCompletedTasks,
+    getExpiredTasks
 } = require('../controllers/taskController')
 
 const router = express.Router()
@@ -25,6 +26,9 @@ router.get('/tomorrow/', getTomorrowTask)
 
 // GET completed tasks
 router.get('/completed', getCompletedTasks)
+
+// GET expired tasks
+router.get('/expired', getExpiredTasks)
 
 // POST a new task
 router.post('/', createTask)

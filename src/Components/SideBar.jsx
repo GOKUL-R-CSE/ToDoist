@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { HiOutlineInbox } from "react-icons/hi";
 import {MdDownloadDone} from 'react-icons/md'
-import {BsCalendar2Date} from 'react-icons/bs'
+import {BsCalendar2Date, BsExclamation} from 'react-icons/bs'
 import {CgCalendarDates} from 'react-icons/cg'
 import {RiAddCircleFill} from 'react-icons/ri'
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ const SideBar = () => {
     { name: "Today", link: "/today", icon: BsCalendar2Date },
     { name: "Upcoming", link: "/tomorrow", icon: CgCalendarDates },
     { name: "Completd", link: "/completed", icon: MdDownloadDone, margin: true },
+    { name: "Expired", link: "/expired", icon: BsExclamation },
     { name: "Add task", link: "/home", icon: RiAddCircleFill },
 
 

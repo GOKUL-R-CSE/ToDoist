@@ -8,8 +8,25 @@ const tomorrow = today.clone().add(1, 'days')
 // get all tasks
 const getTasks = async (req, res) => {
     const user_id = req.user._id
-    const tasks = await Task.find({ user_id, completed: 'false' }).sort({ createdAt: -1 })
+    const tasks = await Task.find({
+        user_id, completed: 'false',
+        date: {
+            $gte: today.toDate(),
+        }
+    }).sort({ date: -1 })
 
+    res.status(200).json(tasks)
+}
+
+// get expired tasks
+const getExpiredTasks = async (req, res) => {
+    const user_id = req.user._id
+    const tasks = await Task.find({
+        user_id, completed: 'false',
+        date: {
+            $lt: today.toDate(),
+        }
+    }).sort({ createdAt: -1 })
     res.status(200).json(tasks)
 }
 
@@ -132,5 +149,6 @@ module.exports = {
     createTask,
     deleteTask,
     updateTask,
-    getCompletedTasks
+    getCompletedTasks,
+    getExpiredTasks
 }
