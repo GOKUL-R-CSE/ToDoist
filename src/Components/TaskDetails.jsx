@@ -5,7 +5,7 @@ import {format} from 'date-fns'
 import { useTasksContext } from '../hooks/useTaskContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 // import { useEffect, useState } from 'react'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 
 const TaskDetails = ({ task }) => {
@@ -52,26 +52,18 @@ const TaskDetails = ({ task }) => {
       dispatch({type: 'COMPLETE_TASKS', payload: json})
     }
     // window.location.reload(false)
-    useEffect(() => {
-    const fetchTasks = async () => {
-      const response = await fetch('https://todoist-backend-production.up.railway.app/api/task', {
-        headers: {
+    const res = await fetch('https://todoist-backend-production.up.railway.app/api/task',{
+      headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${user.token}`
         }
-      })
-      const json = await response.json()
-      console.log(json)
+    })
+    const js = await res.json()
+      console.log(js)
 
-      if (response.ok) {
+      if (res.ok) {
         dispatch({type: 'SET_TASKS', payload: json})
       }
-    }
-    if(user){
-        
-    fetchTasks()
-    }
-  }, [])
     
   }
   
