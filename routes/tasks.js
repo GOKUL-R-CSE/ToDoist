@@ -19,10 +19,10 @@ router.use(requireAuth)
 router.get('/', getTasks)
 
 // GET today task
-router.get('/today/', getTodayTask)
+router.get('/today', getTodayTask)
 
 // GET tomorrow task
-router.get('/tomorrow/', getTomorrowTask)
+router.get('/tomorrow', getTomorrowTask)
 
 // GET completed tasks
 router.get('/completed', getCompletedTasks)

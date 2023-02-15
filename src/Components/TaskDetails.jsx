@@ -70,7 +70,7 @@ const TaskDetails = ({ task }) => {
   
 
   return (
-    <div className="bg-white border-0 m-5 p-5 relative shadow-lg shadow-yellow-400 w-[800px]">
+    <div className="bg-white border-0 m-5 p-5 relative shadow-lg shadow-yellow-500 w-[800px]">
       <h4 className='mb-3 text-xl text-gray-700 font-bold'>{task.title}</h4>
       <div className='overflow-clip w-[600px]'>
         <p className='m-0 text-sm text-gray-500'><strong>Description : </strong>{task.desc}</p>
