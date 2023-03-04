@@ -21,12 +21,12 @@ const Login = () => {
                 <h2 className='text-4xl dark:text-white font-bold text-center'>LOG IN</h2>
                 <div className='flex flex-col text-gray-400 py-2'>
                     <label className='text-white'>Email</label>
-                    <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="email"
+                    <input id='email' className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="email"
                     onChange={(e) => setEmail(e.target.value)} value={email} />
                 </div>
                 <div className='flex flex-col text-gray-400 py-2'>
                     <label className='text-white'>Password</label>
-                    <input className='p-2 rounded-lg bg-gray-700 mt-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="password"
+                    <input id='password' className='p-2 rounded-lg bg-gray-700 mt-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="password"
                     onChange={(e) => setPassword(e.target.value)} value={password} />
                 </div>
                 <button disabled={isLoading} className='w-full my-5 py-2 bg-white text-red-600 hover:bg-gray-900 hover:text-white font-semibold rounded-lg'>Log in</button>
