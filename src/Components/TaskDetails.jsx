@@ -52,7 +52,7 @@ const TaskDetails = ({ task }) => {
     if (response.ok) {
       dispatch({type: 'COMPLETE_TASKS', payload: json})
     }
-    // window.location.reload(false)
+    window.location('/')
     // const res = await fetch('https://todoist-backend-production.up.railway.app/api/task',{
     //   headers: {
     //         'Content-Type': 'application/json',
